@@ -1,0 +1,47 @@
+DEBUG:root:Total available packages:28717
+DEBUG:root:Total installed packages:366
+DEBUG:root:given_list:1
+DEBUG:root:install_list:247
+DEBUG:root:install_list:237
+DEBUG:root:install_list using casting to and from sets:237
+DEBUG:root:install_list_new:28351
+DEBUG:root:install_list_new:0
+DEBUG:root:install_list_new_setty:136
+DEBUG:root:dpkg --purge runit memstat iproute 
+...snip...
+DEBUG:root:dpkg --purge libmysqlclient16 mysql-server-5.1 ruby1.9.1 
+DEBUG:root:dpkg --purge lockfile-progs unbound apache2-mpm-worker 
+DEBUG:root:dpkg --purge apache2.2-common libgmp3-dev sgml-base 
+...snip...
+DEBUG:root:dpkg --purge bind9utils python-apt-common cpp
+...snip...
+DEBUG:root:dpkg --purge emacs23-nox 
+DEBUG:root:
+
+Hint ... the purge list that follows can be piped into ... awk -F':purge ' '/^DEBUG:root:purge/ {print $2}'
+
+DEBUG:root:
+
+purge list (sorted):
+
+DEBUG:root:purge apache2-mpm-worker 
+DEBUG:root:purge apache2-utils 
+DEBUG:root:purge apache2.2-bin 
+DEBUG:root:purge apache2.2-common 
+...snip...
+DEBUG:root:purge cadaver 
+DEBUG:root:purge chkrootkit 
+DEBUG:root:purge cpp 
+DEBUG:root:purge cpp-4.4 
+...snip...
+DEBUG:root:purge emacs23-bin-common 
+DEBUG:root:purge emacs23-common 
+DEBUG:root:purge emacs23-nox 
+...snip...
+DEBUG:root:purge python-apt 
+DEBUG:root:purge python-apt-common 
+...snip...
+DEBUG:root:purge python-gdbm 
+DEBUG:root:purge python-gmpy 
+...snip...
+DEBUG:root:purge xml-core 

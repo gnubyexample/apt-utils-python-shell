@@ -1,0 +1,12 @@
+apt-utils-python-shell project
+
+get-selections-undo.py:
+
+Given the output of a historial dpkg --get-selections, this program, lists
+dpkg --purge suggestions which will get you some way, to returning your
+system back to the package state on that historical date.
+
+Example Usage: 
+cat historical.get-selections | python get-selections-undo.py 2>/tmp/python.stderr
+
+( See get-selections-undo.cmd for further examples )
