@@ -10,3 +10,23 @@ Example Usage:
 cat historical.get-selections | python get-selections-undo.py 2>/tmp/python.stderr
 
 ( See get-selections-undo.cmd for further examples )
+
+
+get-selections-filter.py:
+
+Functionality similar to
+
+dpkg --get-selections | grep -P '\tinstall'
+
+but with some formatting to generate apt-get commends which 
+you can then review and copy / paste.
+
+
+Notes and Links about grep -P
+
+  When GNU grep is operating in pcre mode (-P) then you can specify non-printing characters such as \t  tab (hex 09)
+
+  More about Regular Expressions and Grep at:
+    http://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html#Regular-Expressions
+
+  
